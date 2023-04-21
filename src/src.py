@@ -1,4 +1,3 @@
-# Function that creates and returns a product object
 totalPrice = 0
 
 def createProduct(name, price):
@@ -7,14 +6,12 @@ def createProduct(name, price):
         "price": price
     }
 
-# Function that calculates and returns the total price of products in a list
 def calculateTotalPrice(products):
     global totalPrice
     for product in products:
         totalPrice += product["price"]
     return totalPrice
 
-# Function that asks the user how many products to add
 def askForProduct():
     while True:
             count = int(input("Enter the number of products to add: "))
@@ -33,6 +30,5 @@ def askForProduct():
     calculateTotalPrice(products)
     
 
-# Example usage
 askForProduct()
 print('Total Price:', totalPrice)
