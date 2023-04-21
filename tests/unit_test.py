@@ -1,3 +1,7 @@
+import sys
+
+sys.path.append('/Users/Ondrej/Desktop/CI-pipeline/CI-pipeline/src')
+
 from src import *
 
 def test_createProduct():
