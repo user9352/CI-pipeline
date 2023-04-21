@@ -5,7 +5,7 @@ sys.path.append('/home/runner/work/CI-pipeline/CI-pipeline/src')
 from src import createProduct, calculateTotalPrice
 
 def test_askForProduct():
-    pass
+    count = 2
 
 def test_createProduct():
     product = createProduct("Test Product", 5.5)
