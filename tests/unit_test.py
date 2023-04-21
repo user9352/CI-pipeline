@@ -1,8 +1,4 @@
-import sys
-
-sys.path.append(r'C:\\Users\\Ondrej\\Desktop\\CI-pipeline\\CI-pipeline\\src')
-
-from src.py import createProduct, calculateTotalPrice 
+from src import *
 
 def test_createProduct():
     product = createProduct("Test Product", 5.5)
