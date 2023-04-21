@@ -12,3 +12,6 @@ def test_calculateTotalPrice():
     products = [{"name": "Product 1", "price": 6}, {"name": "Product 2", "price": 3.51}]
     total = calculateTotalPrice(products)
     assert total == 9.51
+
+def test_askForProduct():
+    pass
