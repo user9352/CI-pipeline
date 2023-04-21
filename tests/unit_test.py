@@ -1,4 +1,4 @@
-from src import createProduct, calculateTotalPrice, askForProduct 
+from ..src import createProduct, calculateTotalPrice, askForProduct 
 
 def test_createProduct():
     product = createProduct("Test Product", 5.5)
