@@ -17,7 +17,7 @@ def askForProduct(count, names, prices):
         price = prices[i]
         product = createProduct(name, price)
         products.append(product)
-    
+
     return calculateTotalPrice(products)
 
 #count = 2
