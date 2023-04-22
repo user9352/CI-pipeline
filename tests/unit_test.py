@@ -6,7 +6,7 @@ from src import *
 
 def test_askForProduct(mocker):
     # Mock the function using mocker
-    mocked_askForProduct = mocker.patch('src.askForProduct')
+    mocked_askForProduct = mocker.patch('__main__.askForProduct')
     mocked_askForProduct.return_value = 1
 
     # Call the function being tested
