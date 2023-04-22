@@ -1,11 +1,22 @@
-import sys
+import sys, pytest
 
 sys.path.append('/home/runner/work/CI-pipeline/CI-pipeline/src')
 
 from src import createProduct, calculateTotalPrice
 
-def test_askForProduct():
-    count = 2
+def test_askForProduct(mocker):
+    # Mock the function using mocker
+    mocked_function = mocker.patch('src.askForProduct')
+    mocked_function.return_value = "Mocked result"
+
+    # Call the function being tested
+    result = askForProduct()
+
+    # Assert that the mock function was called
+    mocked_function.assert_called_once()
+
+    # Assert the result
+    assert result == "Mocked result"
 
 def test_createProduct():
     product = createProduct("Test Product", 5.5)
