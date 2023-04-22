@@ -20,7 +20,7 @@ def askForProduct(count, names, prices):
     
     return calculateTotalPrice(products)
 
-#count = 2
+#count =2
 #names = ["Product 1", "Product 2"]
 #prices = [6, 3.51]
 #total_price = askForProduct(count, names, prices)
