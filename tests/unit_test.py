@@ -2,7 +2,6 @@ import sys
 
 sys.path.append('/home/runner/work/CI-pipeline/CI-pipeline/src')
 
-from src import *
 
 def test_askForProduct(mocker):
     # Mock the function using mocker
@@ -17,6 +16,8 @@ def test_askForProduct(mocker):
 
     # Assert the result
     assert result == "Mocked result"
+    
+from src import *
 
 def test_createProduct():
     product = createProduct("Test Product", 5.5)
