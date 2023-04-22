@@ -1,3 +1,5 @@
+totalPrice = 0
+
 def createProduct(name, price):
     return {
         "name": name,
@@ -5,7 +7,7 @@ def createProduct(name, price):
     }
 
 def calculateTotalPrice(products):
-    totalPrice = 0
+    global totalPrice
     for product in products:
         totalPrice += product["price"]
     return totalPrice
