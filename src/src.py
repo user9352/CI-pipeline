@@ -13,19 +13,22 @@ def calculateTotalPrice(products):
     return totalPrice
 
 def askForProduct():
-    #while True:
-            #count = int(input("Enter the number of products to add: "))
-            #if count >= 0:
-             #   break
-            #else:
-             #   print("Invalid input. Please enter a positive integer.")
+    while True:
+        try:
+            count = int(input("Enter the number of products to add: "))
+            if count >= 0:
+                break
+            else:
+                print("Invalid input. Please enter a positive integer.")
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
 
     products = []
-    #for i in range(count):
-        #name = input(f"Enter the name of product {i+1}: ")
-        #price = float(input(f"Enter the price of product {i+1}: "))
-     #   product = createProduct(name, price)
-      #  products.append(product)
+    for i in range(count):
+        name = input(f"Enter the name of product {i+1}: ")
+        price = float(input(f"Enter the price of product {i+1}: "))
+        product = createProduct(name, price)
+        products.append(product)
     
     calculateTotalPrice(products)
     
