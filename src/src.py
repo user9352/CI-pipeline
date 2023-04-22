@@ -14,7 +14,7 @@ def calculateTotalPrice(products):
 
 def askForProduct():
     while True:
-        count = int(input("Enter the number of products to add: "))
+        count = mocked_askForProduct()
         if count >= 0:
             break
         else:
