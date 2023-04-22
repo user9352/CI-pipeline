@@ -6,14 +6,14 @@ from src import *
 
 def test_askForProduct(mocker):
     # Mock the function using mocker
-    askForProduct = mocker.patch('src.askForProduct')
-    askForProduct.return_value = 1
+    mocked_askForProduct = mocker.patch('src.askForProduct')
+    mocked_askForProduct.return_value = 1
 
     # Call the function being tested
-    result = askForProduct()
+    result = mocked_askForProduct()
 
     # Assert that the mock function was called
-    askForProduct.assert_called_once()
+    mocked_askForProduct.assert_called_once()
 
     # Assert the result
     assert result == 1
