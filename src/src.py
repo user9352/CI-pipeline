@@ -25,5 +25,5 @@ def askForProduct(count, names, prices):
 #count = 2
 #names = ["Product 1", "Product 2"]
 #prices = [6, 3.51]
-total_price = askForProduct(count, names, prices)
-print('Total Price:', total_price)
+#total_price = askForProduct(count, names, prices)
+#print('Total Price:', total_price)
