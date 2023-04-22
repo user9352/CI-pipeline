@@ -4,10 +4,10 @@ sys.path.append('/home/runner/work/CI-pipeline/CI-pipeline/src')
 
 from src import *
 
-@pytest.mark.parametrize("user_input, expected_output", [("2\nProduct 1\n6\nProduct 2\n3.51\n", "Total Price: 9.51\n")])
-def test_askForProduct(mocker, capsys, user_input, expected_output):
+def test_askForProduct(mocker, capsys, monkeypatch):
     # Mock user input
-    mocker.patch('builtins.input', side_effect=user_input)
+    user_input = "2\nProduct 1\n6\nProduct 2\n3.51\n"
+    monkeypatch.setattr('builtins.input', lambda _: user_input)
 
     # Call the function being tested
     askForProduct()
@@ -16,7 +16,7 @@ def test_askForProduct(mocker, capsys, user_input, expected_output):
     captured = capsys.readouterr()
 
     # Assert the expected output
-    assert captured.out == expected_output
+    assert captured.out == "Total Price: 9.51\n"
 
 def test_createProduct():
     product = createProduct("Test Product", 5.5)
