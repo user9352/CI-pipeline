@@ -1,8 +1,8 @@
-import sys, pytest
+import sys
 
 sys.path.append('/home/runner/work/CI-pipeline/CI-pipeline/src')
 
-from src import createProduct, calculateTotalPrice
+from src import *
 
 def test_askForProduct(mocker):
     # Mock the function using mocker
