@@ -9,7 +9,7 @@ def test_createProduct():
     assert product == {"name": "Test Product", "price": 3.51}
 
 def test_calculateTotalPrice():
-    products = [{"name": "Product 1", "price": 6}, {"name": "Product 2", "price": 9.51}]
+    products = [{"name": "Product 1", "price": 6}, {"name": "Product 2", "price": 3.51}]
     total = calculateTotalPrice(products)
     assert total == 9.51
 
