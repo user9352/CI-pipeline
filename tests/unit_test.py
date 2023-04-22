@@ -2,11 +2,12 @@ import sys
 
 sys.path.append('/home/runner/work/CI-pipeline/CI-pipeline/src')
 
+from src import *
 
 def test_askForProduct(mocker):
     # Mock the function using mocker
-    askForProduct = mocker.patch('src.askForProduct.count')
-    askForProduct.return_value = "Mocked result"
+    askForProduct = mocker.patch('src.askForProduct')
+    askForProduct.return_value = 1
 
     # Call the function being tested
     result = askForProduct()
@@ -15,9 +16,7 @@ def test_askForProduct(mocker):
     askForProduct.assert_called_once()
 
     # Assert the result
-    assert result == "Mocked result"
-    
-from src import *
+    assert result == 1
 
 def test_createProduct():
     product = createProduct("Test Product", 5.5)
