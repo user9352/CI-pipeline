@@ -9,4 +9,4 @@ def test_askForProduct():
     names = ["Product 1", "Product 2"]
     prices = [6, 3.51]
     total_price = askForProduct(count, names, prices)
-    assert total_price == 9.51, "Total price is not calculated correctly"
+    assert total_price == 9.51
